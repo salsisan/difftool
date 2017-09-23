@@ -10,15 +10,22 @@ import Cocoa
 
 class MainViewController: NSViewController {
     
+    @IBOutlet var leftTextArea: NSTextView!
+    @IBOutlet var rightTextArea: NSTextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
-
+        let left = browseFile()
+        if (left == nil) {
+            return
+        }
+        let right = browseFile()
         do {
-            let contents = try(NSString(contentsOfFile: "samples/right.txt", encoding: String.Encoding.utf8.rawValue))
-            print(contents)
+            let leftcontents = try(NSString(contentsOfFile: left!, encoding: String.Encoding.utf8.rawValue))
+            leftTextArea.insertText(leftcontents)
+            let rightcontents = try(NSString(contentsOfFile: right!, encoding: String.Encoding.utf8.rawValue))
+            rightTextArea.insertText(rightcontents)
         } catch let error as NSError {
             print(error.localizedDescription)
         }
