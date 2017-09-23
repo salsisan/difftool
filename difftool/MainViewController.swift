@@ -32,7 +32,7 @@ class MainViewController: NSViewController {
     
     func browseFile() -> String? {
         let dialog = NSOpenPanel();
-        
+
         dialog.title                   = "Choose a .txt file";
         dialog.showsResizeIndicator    = true;
         dialog.showsHiddenFiles        = false;
@@ -40,7 +40,7 @@ class MainViewController: NSViewController {
         dialog.canCreateDirectories    = true;
         dialog.allowsMultipleSelection = false;
         dialog.allowedFileTypes        = ["txt"];
-        
+
         if (dialog.runModal() == NSApplication.ModalResponse.OK) {
             let result = dialog.url // Pathname of the file
             
