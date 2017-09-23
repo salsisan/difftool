@@ -15,16 +15,17 @@ class MainViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        do {
-          let left = "/tmp/left.txt";
-          let right = "/tmp/right.txt";
-          let leftcontents = try(NSString(contentsOfFile: left, encoding: String.Encoding.utf8.rawValue))
-            leftTextArea.insertText(leftcontents)
-          let rightcontents = try(NSString(contentsOfFile: right, encoding: String.Encoding.utf8.rawValue))
-            rightTextArea.insertText(rightcontents)
-        } catch let error as NSError {
-            print(error.localizedDescription)
+        if let left = Bundle.main.path(forResource: "samples/left", ofType: "txt"),
+            let right = Bundle.main.path(forResource: "samples/right", ofType: "txt") {
+
+            do {
+              let leftcontents = try(NSString(contentsOfFile: left, encoding: String.Encoding.utf8.rawValue))
+                leftTextArea.insertText(leftcontents)
+              let rightcontents = try(NSString(contentsOfFile: right, encoding: String.Encoding.utf8.rawValue))
+                rightTextArea.insertText(rightcontents)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
         }
     }
 
