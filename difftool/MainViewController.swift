@@ -16,15 +16,12 @@ class MainViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let left = browseFile()
-        if (left == nil) {
-            return
-        }
-        let right = browseFile()
         do {
-            let leftcontents = try(NSString(contentsOfFile: left!, encoding: String.Encoding.utf8.rawValue))
+          let left = "/tmp/left.txt";
+          let right = "/tmp/right.txt";
+          let leftcontents = try(NSString(contentsOfFile: left, encoding: String.Encoding.utf8.rawValue))
             leftTextArea.insertText(leftcontents)
-            let rightcontents = try(NSString(contentsOfFile: right!, encoding: String.Encoding.utf8.rawValue))
+          let rightcontents = try(NSString(contentsOfFile: right, encoding: String.Encoding.utf8.rawValue))
             rightTextArea.insertText(rightcontents)
         } catch let error as NSError {
             print(error.localizedDescription)
@@ -69,6 +66,25 @@ class MainViewController: NSViewController {
         }
         return nil
     }
+  
+  func openFiles(path1: String, path2: String) {
+    let left = browseFile()
+    if (left == nil) {
+      return
+    }
+    let right = browseFile()
+    if (right == nil) {
+      return
+    }
+    do {
+      let leftcontents = try(NSString(contentsOfFile: left!, encoding: String.Encoding.utf8.rawValue))
+      leftTextArea.insertText(leftcontents)
+      let rightcontents = try(NSString(contentsOfFile: right!, encoding: String.Encoding.utf8.rawValue))
+      rightTextArea.insertText(rightcontents)
+    } catch let error as NSError {
+      print(error.localizedDescription)
+    }
+  }
 
 }
 

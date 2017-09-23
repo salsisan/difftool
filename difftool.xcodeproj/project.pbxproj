@@ -78,7 +78,6 @@
 		940360D81F76450900B96D98 = {
 			isa = PBXGroup;
 			children = (
-				940361101F764A3800B96D98 /* samples */,
 				940360E31F76450900B96D98 /* difftool */,
 				940360F61F76450900B96D98 /* difftoolTests */,
 				940361011F76450A00B96D98 /* difftoolUITests */,
@@ -99,6 +98,7 @@
 		940360E31F76450900B96D98 /* difftool */ = {
 			isa = PBXGroup;
 			children = (
+				940361101F764A3800B96D98 /* samples */,
 				940360E41F76450900B96D98 /* AppDelegate.swift */,
 				940360E61F76450900B96D98 /* MainViewController.swift */,
 				940360E81F76450900B96D98 /* Assets.xcassets */,
@@ -196,6 +196,11 @@
 					940360E01F76450900B96D98 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					940360F21F76450900B96D98 = {
 						CreatedOnToolsVersion = 9.0;
@@ -419,7 +424,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = difftool/difftool.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = difftool/Info.plist;
@@ -434,7 +438,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = difftool/difftool.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = difftool/Info.plist;
