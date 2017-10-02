@@ -21,6 +21,8 @@ class MainViewController: NSViewController {
       
       fillTextAreas(leftFile: left, rightFile: right)
       colorTextAreas()
+      let h = HelloWorldWrapper()
+      h.say_hello()
     }
   }
   
@@ -42,7 +44,7 @@ class MainViewController: NSViewController {
       // Update the view, if already loaded.
     }
   }
-  
+
   func openFilesFromPicker() {
     let left = browseFile()
     if (left == nil) {
@@ -69,6 +71,5 @@ class MainViewController: NSViewController {
   func colorTextAreas() {
     leftTextArea.backgroundColor = NSColor.green;
   }
-  
 }
 
