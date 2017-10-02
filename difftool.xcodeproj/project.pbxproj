@@ -14,6 +14,7 @@
 		940360F81F76450900B96D98 /* difftoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940360F71F76450900B96D98 /* difftoolTests.swift */; };
 		940361031F76450A00B96D98 /* difftoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940361021F76450A00B96D98 /* difftoolUITests.swift */; };
 		940361111F764A3800B96D98 /* samples in Resources */ = {isa = PBXBuildFile; fileRef = 940361101F764A3800B96D98 /* samples */; };
+		9412BC861F82140800A0214F /* files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412BC851F82140800A0214F /* files.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		940361021F76450A00B96D98 /* difftoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = difftoolUITests.swift; sourceTree = "<group>"; };
 		940361041F76450A00B96D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		940361101F764A3800B96D98 /* samples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = samples; sourceTree = "<group>"; };
+		9412BC851F82140800A0214F /* files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = files.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 		940360E31F76450900B96D98 /* difftool */ = {
 			isa = PBXGroup;
 			children = (
+				9412BC881F82150C00A0214F /* core */,
+				9412BC871F82147300A0214F /* ui */,
+				9412BC841F8213B500A0214F /* io */,
 				940361101F764A3800B96D98 /* samples */,
 				940360E41F76450900B96D98 /* AppDelegate.swift */,
-				940360E61F76450900B96D98 /* MainViewController.swift */,
 				940360E81F76450900B96D98 /* Assets.xcassets */,
-				940360EA1F76450900B96D98 /* Main.storyboard */,
 				940360ED1F76450900B96D98 /* Info.plist */,
 				940360EE1F76450900B96D98 /* difftool.entitlements */,
 			);
@@ -125,6 +128,30 @@
 				940361041F76450A00B96D98 /* Info.plist */,
 			);
 			path = difftoolUITests;
+			sourceTree = "<group>";
+		};
+		9412BC841F8213B500A0214F /* io */ = {
+			isa = PBXGroup;
+			children = (
+				9412BC851F82140800A0214F /* files.swift */,
+			);
+			path = io;
+			sourceTree = "<group>";
+		};
+		9412BC871F82147300A0214F /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				940360E61F76450900B96D98 /* MainViewController.swift */,
+				940360EA1F76450900B96D98 /* Main.storyboard */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		9412BC881F82150C00A0214F /* core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +295,7 @@
 			files = (
 				940360E71F76450900B96D98 /* MainViewController.swift in Sources */,
 				940360E51F76450900B96D98 /* AppDelegate.swift in Sources */,
+				9412BC861F82140800A0214F /* files.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
