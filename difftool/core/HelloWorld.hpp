@@ -14,10 +14,6 @@
 
 class HelloWorld {
 public:
-  HelloWorld() {
-    std::cout << "This is the constructor.\n";
-  }
-
   void say_hello();
 };
 
