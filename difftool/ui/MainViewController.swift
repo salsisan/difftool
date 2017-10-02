@@ -12,7 +12,25 @@ class MainViewController: NSViewController {
   
   @IBOutlet var leftTextArea: NSTextView!
   @IBOutlet var rightTextArea: NSTextView!
+  @IBOutlet var pathControl: NSPathControl!
   
+  @IBAction func didClickWorkspacePathControl(_ sender: NSPathControl) {
+    if let clickedCell = sender.clickedPathComponentCell() {
+      do {
+        // Get the directory contents urls (including subfolders urls)
+        let path = (clickedCell.url!.absoluteString as NSString).deletingLastPathComponent
+        let directoryContents = try FileManager.default.contentsOfDirectory(at: NSURL(string: path) as! URL, includingPropertiesForKeys:nil, options: [])
+        print(directoryContents)
+      } catch {
+        print(error.localizedDescription)
+      }
+
+      
+      
+    } else {
+      NSLog("No path component was selected.")
+    }
+  }
   override func viewDidLoad() {
     super.viewDidLoad()
     
