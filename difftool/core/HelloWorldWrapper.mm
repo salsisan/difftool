@@ -7,7 +7,7 @@
 //
 
 #import "HelloWorldWrapper.h"
-#include "HelloWorld.hpp"
+#import "HelloWorld.hpp"
 
 @implementation HelloWorldWrapper
 
