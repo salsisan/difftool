@@ -21,8 +21,9 @@ class MainViewController: NSViewController {
       
       fillTextAreas(leftFile: left, rightFile: right)
       colorTextAreas()
-      let h = HelloWorldWrapper()
-      h.say_hello()
+      let d = DiffMatchPatch()
+      let result = d.diff_main(ofOldString: "hello", andNewString: "helo")
+      print(result!)
     }
   }
   

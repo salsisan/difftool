@@ -15,8 +15,8 @@
 		940361031F76450A00B96D98 /* difftoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940361021F76450A00B96D98 /* difftoolUITests.swift */; };
 		940361111F764A3800B96D98 /* samples in Resources */ = {isa = PBXBuildFile; fileRef = 940361101F764A3800B96D98 /* samples */; };
 		9412BC861F82140800A0214F /* files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412BC851F82140800A0214F /* files.swift */; };
-		94DB8C411F82259B0016964E /* HelloWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94DB8C401F82259B0016964E /* HelloWorld.cpp */; };
-		94DB8C441F8226160016964E /* HelloWorldWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94DB8C421F8226160016964E /* HelloWorldWrapper.mm */; };
+		9488C2711F82494E0069DC4D /* DiffMatchPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9488C2681F8249250069DC4D /* DiffMatchPatch.framework */; };
+		9488C2721F8249570069DC4D /* DiffMatchPatch.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 9488C2681F8249250069DC4D /* DiffMatchPatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +34,56 @@
 			remoteGlobalIDString = 940360E01F76450900B96D98;
 			remoteInfo = difftool;
 		};
+		9488C2671F8249250069DC4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9488C2601F8249250069DC4D /* DiffMatchPatch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = DiffMatchPatch;
+		};
+		9488C2691F8249250069DC4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9488C2601F8249250069DC4D /* DiffMatchPatch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D5BC0AF128CA8E200B8F5FF;
+			remoteInfo = DiffMatchPatchTest;
+		};
+		9488C26B1F8249250069DC4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9488C2601F8249250069DC4D /* DiffMatchPatch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D96F3A212AFC68900C3E5C0;
+			remoteInfo = speedtest;
+		};
+		9488C26D1F8249250069DC4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9488C2601F8249250069DC4D /* DiffMatchPatch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D03488E135F75460051FE16;
+			remoteInfo = "mode-test";
+		};
+		9488C26F1F8249480069DC4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9488C2601F8249250069DC4D /* DiffMatchPatch.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = DiffMatchPatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9488C25E1F8247120069DC4D /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9488C2721F8249570069DC4D /* DiffMatchPatch.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		940360E11F76450900B96D98 /* difftool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = difftool.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,11 +101,8 @@
 		940361041F76450A00B96D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		940361101F764A3800B96D98 /* samples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = samples; sourceTree = "<group>"; };
 		9412BC851F82140800A0214F /* files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = files.swift; sourceTree = "<group>"; };
-		94DB8C3E1F82257A0016964E /* HelloWorld.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HelloWorld.hpp; sourceTree = "<group>"; };
+		9488C2601F8249250069DC4D /* DiffMatchPatch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DiffMatchPatch.xcodeproj; path = "diff-match-patch/DiffMatchPatch.xcodeproj"; sourceTree = "<group>"; };
 		94DB8C3F1F82259B0016964E /* difftool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "difftool-Bridging-Header.h"; sourceTree = "<group>"; };
-		94DB8C401F82259B0016964E /* HelloWorld.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorld.cpp; sourceTree = "<group>"; };
-		94DB8C421F8226160016964E /* HelloWorldWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HelloWorldWrapper.mm; sourceTree = "<group>"; };
-		94DB8C431F8226160016964E /* HelloWorldWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldWrapper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9488C2711F82494E0069DC4D /* DiffMatchPatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,10 +134,12 @@
 		940360D81F76450900B96D98 = {
 			isa = PBXGroup;
 			children = (
+				9488C2601F8249250069DC4D /* DiffMatchPatch.xcodeproj */,
 				940360E31F76450900B96D98 /* difftool */,
 				940360F61F76450900B96D98 /* difftoolTests */,
 				940361011F76450A00B96D98 /* difftoolUITests */,
 				940360E21F76450900B96D98 /* Products */,
+				9488C25C1F8247080069DC4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,13 +206,27 @@
 		9412BC881F82150C00A0214F /* core */ = {
 			isa = PBXGroup;
 			children = (
-				94DB8C3E1F82257A0016964E /* HelloWorld.hpp */,
-				94DB8C401F82259B0016964E /* HelloWorld.cpp */,
 				94DB8C3F1F82259B0016964E /* difftool-Bridging-Header.h */,
-				94DB8C421F8226160016964E /* HelloWorldWrapper.mm */,
-				94DB8C431F8226160016964E /* HelloWorldWrapper.h */,
 			);
 			path = core;
+			sourceTree = "<group>";
+		};
+		9488C25C1F8247080069DC4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9488C2611F8249250069DC4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9488C2681F8249250069DC4D /* DiffMatchPatch.framework */,
+				9488C26A1F8249250069DC4D /* DiffMatchPatchTest.xctest */,
+				9488C26C1F8249250069DC4D /* speedtest */,
+				9488C26E1F8249250069DC4D /* mode-test */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,10 +239,12 @@
 				940360DD1F76450900B96D98 /* Sources */,
 				940360DE1F76450900B96D98 /* Frameworks */,
 				940360DF1F76450900B96D98 /* Resources */,
+				9488C25E1F8247120069DC4D /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9488C2701F8249480069DC4D /* PBXTargetDependency */,
 			);
 			name = difftool;
 			productName = difftool;
@@ -265,6 +330,12 @@
 			mainGroup = 940360D81F76450900B96D98;
 			productRefGroup = 940360E21F76450900B96D98 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9488C2611F8249250069DC4D /* Products */;
+					ProjectRef = 9488C2601F8249250069DC4D /* DiffMatchPatch.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				940360E01F76450900B96D98 /* difftool */,
@@ -273,6 +344,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9488C2681F8249250069DC4D /* DiffMatchPatch.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DiffMatchPatch.framework;
+			remoteRef = 9488C2671F8249250069DC4D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9488C26A1F8249250069DC4D /* DiffMatchPatchTest.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DiffMatchPatchTest.xctest;
+			remoteRef = 9488C2691F8249250069DC4D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9488C26C1F8249250069DC4D /* speedtest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = speedtest;
+			remoteRef = 9488C26B1F8249250069DC4D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9488C26E1F8249250069DC4D /* mode-test */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "mode-test";
+			remoteRef = 9488C26D1F8249250069DC4D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		940360DF1F76450900B96D98 /* Resources */ = {
@@ -307,10 +409,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				940360E71F76450900B96D98 /* MainViewController.swift in Sources */,
-				94DB8C441F8226160016964E /* HelloWorldWrapper.mm in Sources */,
 				940360E51F76450900B96D98 /* AppDelegate.swift in Sources */,
 				9412BC861F82140800A0214F /* files.swift in Sources */,
-				94DB8C411F82259B0016964E /* HelloWorld.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +442,11 @@
 			isa = PBXTargetDependency;
 			target = 940360E01F76450900B96D98 /* difftool */;
 			targetProxy = 940360FF1F76450A00B96D98 /* PBXContainerItemProxy */;
+		};
+		9488C2701F8249480069DC4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DiffMatchPatch;
+			targetProxy = 9488C26F1F8249480069DC4D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
