@@ -749,7 +749,7 @@
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hd-6V-aBb">
+                                                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hd-6V-aBb">
                                                         <rect key="frame" x="0.0" y="0.0" width="483.5" height="1833"/>
                                                         <clipView key="contentView" id="QNx-8M-bWf">
                                                             <rect key="frame" x="1" y="1" width="481.5" height="1831"/>
@@ -766,8 +766,8 @@
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </clipView>
-                                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="Nep-Wq-L0E">
-                                                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                        <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="Nep-Wq-L0E">
+                                                            <rect key="frame" x="1" y="1816" width="481.5" height="16"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Z8e-7m-qBb">

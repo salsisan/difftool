@@ -24,21 +24,22 @@ class MainViewController: NSViewController {
       } catch {
         print(error.localizedDescription)
       }
-
-      
-      
     } else {
       NSLog("No path component was selected.")
     }
   }
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
+    // Initialize text areas
+    initTextArea(view: leftTextArea)
+    initTextArea(view: rightTextArea)
+
     if let left = Bundle.main.path(forResource: "samples/left", ofType: "txt"),
       let right = Bundle.main.path(forResource: "samples/right", ofType: "txt") {
       
       fillTextAreas(leftFile: left, rightFile: right)
-      colorTextAreas()
       let d = DiffMatchPatch()
       let result = d.diff_main(ofOldString: "hello", andNewString: "helo")
       print(result!)
@@ -64,6 +65,10 @@ class MainViewController: NSViewController {
     }
   }
 
+  func initTextArea(view: NSTextView) {
+    view.font = NSFont(name: "Menlo-Regular", size: 11.0)!
+  }
+
   func openFilesFromPicker() {
     let left = browseFile()
     if (left == nil) {
@@ -87,8 +92,5 @@ class MainViewController: NSViewController {
     rightTextArea.scroll(NSPoint.zero)
   }
   
-  func colorTextAreas() {
-    leftTextArea.backgroundColor = NSColor.green;
-  }
 }
 
