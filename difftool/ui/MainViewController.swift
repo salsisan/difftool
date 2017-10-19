@@ -44,6 +44,8 @@ class MainViewController: NSViewController {
       let result = d.diff_main(ofOldString: "hello", andNewString: "helo")
       print(result!)
     }
+    leftTextArea.lnv_setUpLineNumberView();
+    rightTextArea.lnv_setUpLineNumberView();
   }
   
   override func viewDidAppear() {

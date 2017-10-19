@@ -1,3 +1,7 @@
-[submodule "diff-match-patch"]
-	path = diff-match-patch
+[submodule "third_party/NSTextView-LineNumberView"]
+	path = third_party/NSTextView-LineNumberView
+	url = https://github.com/yichizhang/NSTextView-LineNumberView.git
+
+[submodule "third_party/google-diff-match-patch-Objective-C"]
+	path = third_party/google-diff-match-patch-Objective-C
 	url = https://github.com/JanX2/google-diff-match-patch-Objective-C.git
