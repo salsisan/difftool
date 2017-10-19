@@ -19,7 +19,7 @@ class MainViewController: NSViewController {
       do {
         // Get the directory contents urls (including subfolders urls)
         let path = (clickedCell.url!.absoluteString as NSString).deletingLastPathComponent
-        let directoryContents = try FileManager.default.contentsOfDirectory(at: NSURL(string: path) as! URL, includingPropertiesForKeys:nil, options: [])
+        let directoryContents = try FileManager.default.contentsOfDirectory(at: NSURL(string: path)! as URL, includingPropertiesForKeys:nil, options: [])
         print(directoryContents)
       } catch {
         print(error.localizedDescription)
