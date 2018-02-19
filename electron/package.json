@@ -1,0 +1,16 @@
+{
+  "name": "electron-diff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codemirror": "^5.34.0",
+    "electron": "^1.8.2",
+    "split.js": "^1.3.5"
+  }
+}

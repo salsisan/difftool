@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Electron Diff</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="left pane">
+        <div class="input-container">
+          <input class="filename">
+          <button class="browse-button" onclick="browse('left')">Browse</button>
+        </div>
+        <input class="left editor">
+      </div>
+      <div class="right pane">
+        <div class="input-container">
+          <input class="filename">
+          <button class="browse-button" onclick="browse('right')">Browse</button>
+        </div>
+        <input class="right editor">
+      </div>
+    </div>
+    <input id="file-input" type="file" name="selectedFileName" style="display: none;" />
+    <script src="render.js"></script>
+  </body>
+</html>
