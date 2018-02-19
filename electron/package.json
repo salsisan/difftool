@@ -1,16 +1,24 @@
 {
   "name": "electron-diff",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "concurrently -k -r \"electron .\" \"tsc -w\"",
+    "pack": "electron-packager . sample --out=dist --arch=x64 --platform=win32 --version=1.8.2 --overwrite --prune --ignore=dist"
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "electron": "^1.8.2",
+    "electron-packager": "^11.0.0",
+    "typescript": "^2.7.1"
+  },
   "dependencies": {
     "codemirror": "^5.34.0",
-    "electron": "^1.8.2",
     "split.js": "^1.3.5"
   }
 }

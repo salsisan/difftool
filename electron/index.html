@@ -11,19 +11,21 @@
       <div class="left pane">
         <div class="input-container">
           <input class="filename">
-          <button class="browse-button" onclick="browse('left')">Browse</button>
+          <button id="leftBrowse" class="browse-button">Browse</button>
         </div>
         <input class="left editor">
       </div>
       <div class="right pane">
         <div class="input-container">
           <input class="filename">
-          <button class="browse-button" onclick="browse('right')">Browse</button>
+          <button id="rightBrowse" class="browse-button">Browse</button>
         </div>
         <input class="right editor">
       </div>
     </div>
     <input id="file-input" type="file" name="selectedFileName" style="display: none;" />
-    <script src="render.js"></script>
+    <script>
+      require('./index.js')
+    </script>
   </body>
 </html>
