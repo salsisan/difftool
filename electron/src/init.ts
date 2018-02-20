@@ -16,15 +16,12 @@ const leftEditor = CodeMirror.fromTextArea(document.querySelector('.left.editor'
   theme: 'mbo',
 });
 
-leftEditor.value = 'hello world';
 const rightEditor = CodeMirror.fromTextArea(document.querySelector('.right.editor'), {
   lineNumbers: true,
   lineWrapping: true,
   mode: 'javascript',
   theme: 'mbo',
 });
-
-rightEditor.value = 'hello world';
 
 function browse(pane) {
   dialog.showOpenDialog(null, (fileNames) => {

@@ -6,6 +6,10 @@
 build/
 DerivedData/
 
+## Transpiled Javascript
+*.js
+*.js.map
+
 ## Various settings
 *.pbxuser
 !default.pbxuser

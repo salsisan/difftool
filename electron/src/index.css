@@ -20,18 +20,11 @@ body {
   flex-grow: 1;
 }
 
-.left {
-  background-color: #eee;
-}
-
-.right {
-  background-color: #ddd;
-}
-
 .input-container {
-  margin: 5px;
+  background-color: #eee;
   display: flex;
   flex-shrink: 0;
+  padding: 5px;
 }
 
 .filename {
@@ -52,6 +45,7 @@ body {
 
 .gutter {
   background-color: #eee;
+  width: 5px !important;
 }
 
 .gutter:hover {
